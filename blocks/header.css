@@ -1,0 +1,26 @@
+.header {
+  margin-top: 45px;
+  padding-bottom: 41px;
+  border-bottom: rgb(84 84 84 / 70%) 1px solid;
+}
+
+.header__image {
+  height: 33px;
+  width: 173px;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 620px) {
+  .header {
+    padding-bottom: 32px;
+    margin-top: 28px;
+    border-bottom: rgb(84 84 84 / 70%) 1px solid;
+    box-sizing: border-box;
+  }
+
+  .header__image {
+    width: 126px;
+    height: 24px;
+    margin-left: 27px;
+  }
+}

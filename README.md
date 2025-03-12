@@ -12,7 +12,7 @@ This project is made so all the elements are displayed correctly on popular scre
 
 **Figma**
 
-- [Link to the project on Github Pages] https://justjordananderson.github.io/se_project_aroundtheus_project_updated/
+- [Link to the project on Github Pages] https://justjordananderson.github.io/se_project_aroundtheus/
 
 **Images**
 

@@ -1,0 +1,23 @@
+.modal__preview-container {
+  padding: 0;
+  position: relative;
+}
+
+.modal__preview-image {
+  max-width: 80vw;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.modal__caption {
+  font-family: "Inter", Arial, sans-serif;
+  color: white;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.52px;
+  text-align: left;
+  width: 240px;
+  height: 12px;
+}

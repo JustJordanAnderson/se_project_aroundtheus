@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+    <meta name="description" content="Scenic views all over the US" />
+    <meta name="author" content="Jordan Anderson" />
+    <meta name="keywords" content="HTML,CSS" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <title>Around the U.S</title>
+  </head>
+  <body class="page">
+    <div class="page__content">
+      <header class="header page__section">
+        <img
+          src="<%=require('./images/logo.svg')%>"
+          class="header__image"
+          alt="Around the U.S. logo"
+        />
+      </header>
+      <main class="content">
+        <section class="profile page__section">
+          <img
+            src="<%=require('./images/jacques-cousteau.jpg')%>"
+            alt="Avatar"
+            class="profile__image"
+          />
+
+          <div class="profile__info">
+            <h1 class="profile__title">Jacques Cousteau</h1>
+            <button
+              class="profile__edit-button"
+              id="profile-edit-button"
+              type="button"
+            ></button>
+            <p class="profile__description">Explorer</p>
+          </div>
+          <button class="profile__add-button" type="button"></button>
+        </section>
+        <section class="cards page__section">
+          <ul class="cards__list"></ul>
+        </section>
+      </main>
+      <footer class="footer page__section">
+        <p class="footer__copyright">&copy;2022 Around The U.S</p>
+      </footer>
+    </div>
+
+    <!-- Edit profile modal -->
+    <div class="modal" id="modal__profile-edit">
+      <div class="modal__container">
+        <button
+          class="modal__close"
+          type="button"
+          id="modal__profile-close-button"
+        ></button>
+        <p class="modal__heading">Edit Profile</p>
+        <form class="modal__form" name="profile-form">
+          <label class="modal__label">
+            <input
+              class="modal__form-input-name modal__form-input"
+              type="text"
+              name="name"
+              id="modal__form-input-name"
+              placeholder="Name"
+              minlength="2"
+              maxlength="40"
+              required
+            />
+            <span class="modal__error" id="modal__form-input-name-error"></span>
+          </label>
+          <label class="modal__label">
+            <input
+              class="modal__form-input-description modal__form-input"
+              type="text"
+              name="description"
+              id="modal__form-input-description"
+              placeholder="Description"
+              minlength="2"
+              maxlength="200"
+              required
+            />
+            <span
+              class="modal__error"
+              id="modal__form-input-description-error"
+            ></span>
+          </label>
+          <button class="modal__button modal__button_disabled" disabled>
+            Save
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Add card modal -->
+    <div class="modal" id="modal__add-card">
+      <div class="modal__container">
+        <button
+          class="modal__close"
+          type="button"
+          id="modal__add-close-button"
+        ></button>
+        <p class="modal__heading">New Place</p>
+        <form class="modal__form" name="add-card-form">
+          <label class="modal__label">
+            <input
+              class="modal__form-input-title modal__form-input"
+              type="text"
+              name="title"
+              id="modal__form-input-title"
+              placeholder="Title"
+              minlength="1"
+              maxlength="30"
+              required
+            />
+            <span
+              class="modal__error"
+              id="modal__form-input-title-error"
+            ></span>
+          </label>
+          <label class="modal__label">
+            <input
+              class="modal__form-input"
+              type="url"
+              name="url"
+              id="modal__form-input-url"
+              placeholder="Image URL"
+              required
+            />
+            <span class="modal__error" id="modal__form-input-url-error"></span>
+          </label>
+          <button class="modal__button modal__button_disabled" disabled>
+            Create
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Preview image popup -->
+    <div class="modal" id="modal__preview-popup">
+      <div class="modal__preview-container">
+        <button
+          class="modal__close"
+          type="button"
+          id="modal__preview-close-button"
+        ></button>
+        <img class="modal__preview-image" src="" alt="" />
+        <p class="modal__caption"></p>
+      </div>
+    </div>
+
+    <template id="card__template">
+      <li class="card">
+        <img class="card__image" src="" alt="" />
+        <div class="card__description">
+          <h2 class="card__title"></h2>
+          <button class="card__like-button" type="button"></button>
+          <button class="card__delete-button" type="button"></button>
+        </div>
+      </li>
+    </template>
+  </body>
+</html>
